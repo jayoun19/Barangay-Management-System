@@ -32,4 +32,30 @@ Follow these steps to run the project locally:
    git clone [https://github.com/jayoun19/Barangay-Management-System.git](https://github.com/jayoun19/Barangay-Management-System.git)
    cd Barangay-Management-System
 
-   
+2. Install Backend Dependencies
+composer install
+
+3. Install Frontend Dependencies
+npm install
+npm run build
+
+4. Setup Environment Variables
+Copy .env.example to .env
+
+Update DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD with your Supabase credentials.
+
+Add your OPENWEATHER_API_KEY for the typhoon monitoring feature.
+
+5. Generate Security Key & Migrate
+php artisan key:generate
+php artisan migrate
+
+6. Run the Application
+php artisan serve
+
+Visit http://127.0.0.1:8000 in your browser.
+
+
+
+
+
